@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeCash.API", "HomeCash.API\HomeCash.API.csproj", "{72DA9DFF-ABC3-4CF7-A324-05EE089DC105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCash.Application", "HomeCash.Application\HomeCash.Application.csproj", "{D7741FD5-DA8B-4D50-AFC4-BF61528D4B09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCash.Domain", "HomeCash.Domain\HomeCash.Domain.csproj", "{FF236E99-E6B7-4CD7-9AE8-FE61AAA92839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCash.Infrastructure", "HomeCash.Infrastructure\HomeCash.Infrastructure.csproj", "{DA741CF0-2F76-4756-8642-1D810A266FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCash.Tests", "HomeCash.Tests\HomeCash.Tests.csproj", "{B0D1B2A0-1A55-483B-B253-8A01C3C6D42E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72DA9DFF-ABC3-4CF7-A324-05EE089DC105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72DA9DFF-ABC3-4CF7-A324-05EE089DC105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72DA9DFF-ABC3-4CF7-A324-05EE089DC105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72DA9DFF-ABC3-4CF7-A324-05EE089DC105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7741FD5-DA8B-4D50-AFC4-BF61528D4B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7741FD5-DA8B-4D50-AFC4-BF61528D4B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7741FD5-DA8B-4D50-AFC4-BF61528D4B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7741FD5-DA8B-4D50-AFC4-BF61528D4B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF236E99-E6B7-4CD7-9AE8-FE61AAA92839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF236E99-E6B7-4CD7-9AE8-FE61AAA92839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF236E99-E6B7-4CD7-9AE8-FE61AAA92839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF236E99-E6B7-4CD7-9AE8-FE61AAA92839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA741CF0-2F76-4756-8642-1D810A266FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA741CF0-2F76-4756-8642-1D810A266FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA741CF0-2F76-4756-8642-1D810A266FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA741CF0-2F76-4756-8642-1D810A266FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D1B2A0-1A55-483B-B253-8A01C3C6D42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D1B2A0-1A55-483B-B253-8A01C3C6D42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D1B2A0-1A55-483B-B253-8A01C3C6D42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D1B2A0-1A55-483B-B253-8A01C3C6D42E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F3D5F41-06BE-457A-BC86-4A812F32CC67}
+	EndGlobalSection
+EndGlobal
