@@ -17,4 +17,9 @@
     <ProjectReference Include="..\HomeCash.Infrastructure\HomeCash.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="QueryHandler\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
 </Project>

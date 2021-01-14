@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HomeCash.Domain.Entities
 {
-   public  class Income
+    public class Income
     {
         public Guid Id { get; set; }
         public string Type { get; set; }

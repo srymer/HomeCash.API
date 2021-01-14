@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HomeCash.Domain.Entities
+﻿namespace HomeCash.Domain.Entities
 {
     public class Shop
     {

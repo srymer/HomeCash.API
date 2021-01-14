@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using HomeCash.Domain.Entities;
+﻿using HomeCash.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HomeCash.Infrastructure.EFCore.DbContexts
@@ -60,10 +57,6 @@ namespace HomeCash.Infrastructure.EFCore.DbContexts
             modelBuilder.Entity<Shop>().HasKey(i => i.Id).HasName("Id_Shop");
             modelBuilder.Entity<Shop>().Property(x => x.Id).HasColumnName("Id_Shop").IsRequired();
             modelBuilder.Entity<Shop>().Property(x => x.Name).HasColumnName("Name").IsRequired();
-            
-
         }
-              
-
     }
 }
