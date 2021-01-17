@@ -1,6 +1,7 @@
 using AutoMapper;
 using HomeCash.Application.CommandHandlers;
 using HomeCash.Application.Services;
+using HomeCash.Application.Services.Interfaces;
 using HomeCash.Domain.AutoMapperProfiles;
 using HomeCash.Domain.RepositoryContracts;
 using HomeCash.Infrastructure.EFCore.DbContexts;
@@ -13,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -31,7 +33,7 @@ namespace HomeCash.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            RegisterInterfaces(services);
+            RegisterRepositories(services);
             RegisterDbContext(services);
             RegisterTokenService(services);
             RegisterMediatR(services);
@@ -45,7 +47,6 @@ namespace HomeCash.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -73,14 +74,15 @@ namespace HomeCash.API
                 });
         }
 
-        private void RegisterInterfaces(IServiceCollection services)
+        private void RegisterRepositories(IServiceCollection services)
         {
-            services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<ICostRepository, CostRepository>();
-            services.AddScoped<IHomeBaseRepository, HomeBaseRepository>();
-            services.AddScoped<IIncomeRepository, IncomeRepository>();
-            services.AddScoped<IShopRepository, ShopRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddTransient<ITokenService, TokenService>();
+            services.AddTransient<ICostRepository, CostRepository>();
+            services.AddTransient<IHomeBaseRepository, HomeBaseRepository>();
+            services.AddTransient<IIncomeRepository, IncomeRepository>();
+            services.AddTransient<IShopRepository, ShopRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserService, UserService>();
 
         }
 
@@ -94,7 +96,7 @@ namespace HomeCash.API
 
         private void RegisterMediatR(IServiceCollection services)
         {
-            services.AddMediatR(typeof(Startup).Assembly);
+            services.AddMediatR(typeof(RegisterUserCommandHandler).Assembly);
         }
 
         private void RegisterAutoMapper(IServiceCollection services)

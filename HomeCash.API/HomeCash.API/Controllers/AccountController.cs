@@ -18,9 +18,9 @@ namespace HomeCash.API.Controllers
         [HttpPost("register")]
         public async Task<UserDTO> RegisterUser(RegisterDTO registerDTO)
         {
-            var command = new RegisterUserCommand(registerDTO);
-            var result = await _mediator.Send(command);
-            return result;
+          var command = new RegisterUserCommand(registerDTO);
+          var result = await _mediator.Send(command);          
+          return result;
         }
     }
 }

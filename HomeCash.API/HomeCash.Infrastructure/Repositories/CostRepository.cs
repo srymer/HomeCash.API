@@ -42,7 +42,7 @@ namespace HomeCash.Infrastructure.Repositories
 
         public async Task UpdateUser(Cost cost)
         {
-            _context.Entry(cost).State = EntityState.Modified;
+            _context.Update(cost);
             await _context.SaveChangesAsync();
         }
     }

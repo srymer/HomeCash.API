@@ -1,5 +1,6 @@
 ﻿using HomeCash.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace HomeCash.Infrastructure.EFCore.DbContexts
 {

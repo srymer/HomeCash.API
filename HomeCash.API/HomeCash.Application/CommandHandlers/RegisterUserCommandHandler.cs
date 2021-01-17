@@ -1,6 +1,7 @@
 ﻿using HomeCash.Application.Commands;
 using HomeCash.Application.DTOs;
 using HomeCash.Application.Services;
+using HomeCash.Application.Services.Interfaces;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ namespace HomeCash.Application.CommandHandlers
 {
     public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, UserDTO>
     {
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
-        public RegisterUserCommandHandler(UserService userService)
+        public RegisterUserCommandHandler(IUserService userService)
         {
             _userService = userService;
         }

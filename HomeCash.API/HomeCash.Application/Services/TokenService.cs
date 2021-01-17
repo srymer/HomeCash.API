@@ -1,5 +1,5 @@
-﻿using HomeCash.Domain.Entities;
-using HomeCash.Domain.RepositoryContracts;
+﻿using HomeCash.Application.Services.Interfaces;
+using HomeCash.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;

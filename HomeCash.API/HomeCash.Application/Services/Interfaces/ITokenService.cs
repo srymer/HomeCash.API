@@ -1,6 +1,6 @@
 ﻿using HomeCash.Domain.Entities;
 
-namespace HomeCash.Domain.RepositoryContracts
+namespace HomeCash.Application.Services.Interfaces
 {
     public interface ITokenService
     {
