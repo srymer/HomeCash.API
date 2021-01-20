@@ -15,12 +15,28 @@ namespace HomeCash.API.Controllers
             _mediator = mediator;
         }
 
+        [HttpPost("registerMember")]
+        public async Task<UserDTO> RegisterHomeMemberAsync(RegisterHomeMemberDTO registerHomeMemberDTO)
+        {
+            var command = new RegisterHomeMemberCommand(registerHomeMemberDTO);
+            var result = await _mediator.Send(command);
+            return result;
+        }
+
         [HttpPost("register")]
-        public async Task<UserDTO> RegisterUser(RegisterDTO registerDTO)
+        public async Task<UserDTO> RegisterUserAsync(RegisterDTO registerDTO)
         {
           var command = new RegisterUserCommand(registerDTO);
           var result = await _mediator.Send(command);          
           return result;
+        }
+        
+        [HttpPost("login")]
+        public async Task<UserDTO> LoginUserAsync(LoginDTO loginDTO)
+        {
+            var command = new LoginUserCommand(loginDTO);
+            var result = await _mediator.Send(command);
+            return result;
         }
     }
 }

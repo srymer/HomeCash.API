@@ -16,25 +16,25 @@ namespace HomeCash.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateHomeBase(HomeBase homeBase)
+        public async Task CreateHomeBaseAsync(HomeBase homeBase)
         {
             _context.HomeBases.Add(homeBase);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteHomeBase(Guid homeId)
+        public async Task DeleteHomeBaseAsync(Guid homeId)
         {
             var homeBase = await _context.HomeBases.FindAsync(homeId);
             _context.HomeBases.Remove(homeBase);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<HomeBase> GetHomeBaseById(Guid homeId)
+        public async Task<HomeBase> GetHomeBaseByIdAsync(Guid homeId)
         {
             return await _context.HomeBases.FindAsync(homeId);
         }
 
-        public async Task UpdateHomeBase(HomeBase homeBase)
+        public async Task UpdateHomeBaseAsync(HomeBase homeBase)
         {
             _context.Entry(homeBase).State = EntityState.Modified;
             await _context.SaveChangesAsync();

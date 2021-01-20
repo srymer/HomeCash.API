@@ -17,30 +17,30 @@ namespace HomeCash.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateShop(Shop shop)
+        public async Task CreateShopAsync(Shop shop)
         {
             _context.Shops.Add(shop);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteShop(Guid id)
+        public async Task DeleteShopAsync(Guid id)
         {
             var shop = await _context.Shops.FindAsync(id);
             _context.Shops.Remove(shop);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Shop> GetShopByID(Guid id)
+        public async Task<Shop> GetShopByIDAsync(Guid id)
         {
             return await _context.Shops.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Shop>> GetShops()
+        public async Task<IEnumerable<Shop>> GetShopsAsync()
         {
             return await _context.Shops.ToListAsync();
         }
 
-        public async Task UpdateShop(Shop shop)
+        public async Task UpdateShopAsync(Shop shop)
         {
             _context.Entry(shop).State = EntityState.Modified;
             await _context.SaveChangesAsync();

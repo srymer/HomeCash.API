@@ -17,30 +17,30 @@ namespace HomeCash.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateCost(Cost cost)
+        public async Task CreateCostAsync(Cost cost)
         {
             _context.Costs.Add(cost);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteCost(Guid id)
+        public async Task DeleteCostAsync(Guid id)
         {
             var cost = await _context.Costs.FindAsync(id);
             _context.Costs.Remove(cost);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Cost> GetCostByID(Guid id)
+        public async Task<Cost> GetCostByIDAsync(Guid id)
         {
             return await _context.Costs.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Cost>> GetCosts()
+        public async Task<IEnumerable<Cost>> GetCostsAsync()
         {
             return await _context.Costs.ToListAsync();
         }
 
-        public async Task UpdateUser(Cost cost)
+        public async Task UpdateUserAsync(Cost cost)
         {
             _context.Update(cost);
             await _context.SaveChangesAsync();

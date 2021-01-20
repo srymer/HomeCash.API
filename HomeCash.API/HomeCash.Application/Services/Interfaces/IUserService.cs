@@ -1,13 +1,12 @@
 ﻿using HomeCash.Application.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HomeCash.Application.Services.Interfaces
 {
-   public interface IUserService
+    public interface IUserService
     {
-        Task<UserDTO> RegisterUser(RegisterDTO registerDTO);
+        Task<UserDTO> RegisterUserAsync(RegisterDTO registerDTO);
+        Task<UserDTO> LoginUserAsync(LoginDTO loginDTO);
+        Task<UserDTO> RegisterHomeMemberAsync(RegisterHomeMemberDTO registerHomeMemberDTO);
     }
 }

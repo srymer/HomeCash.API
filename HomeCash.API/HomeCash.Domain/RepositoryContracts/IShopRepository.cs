@@ -8,14 +8,14 @@ namespace HomeCash.Domain.RepositoryContracts
 {
     public interface IShopRepository
     {
-        public Task<IEnumerable<Shop>> GetShops();
+        public Task<IEnumerable<Shop>> GetShopsAsync();
 
-        public Task<Shop> GetShopByID(Guid id);
+        public Task<Shop> GetShopByIDAsync(Guid id);
 
-        public Task CreateShop(Shop shop);
+        public Task CreateShopAsync(Shop shop);
 
-        public Task DeleteShop(Guid id);
+        public Task DeleteShopAsync(Guid id);
 
-        public Task UpdateShop(Shop shop);
+        public Task UpdateShopAsync(Shop shop);
     }
 }

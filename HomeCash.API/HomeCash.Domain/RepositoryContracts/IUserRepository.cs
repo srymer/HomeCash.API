@@ -10,12 +10,13 @@ namespace HomeCash.Domain.RepositoryContracts
         public Task<IEnumerable<User>> GetUsersByIdAsync(Guid id);
 
         public Task<User> GetUserByIdAsync(Guid id);
+        public Task<User> GetUserByUserNameAsync(string userName);
 
-        public Task CreateUser(User user);
+        public Task CreateUserAsync(User user);
 
-        public Task DeleteUser(Guid id);
+        public Task DeleteUserAsync(Guid id);
 
-        public Task UpdateUser(User user);
+        public Task UpdateUserAsync(User user);
         
     }
 }

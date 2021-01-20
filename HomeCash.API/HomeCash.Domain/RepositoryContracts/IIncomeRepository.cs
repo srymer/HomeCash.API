@@ -7,14 +7,14 @@ namespace HomeCash.Domain.RepositoryContracts
 {
     public interface IIncomeRepository
     {
-        public Task<IEnumerable<Income>> GetIncomes();
+        public Task<IEnumerable<Income>> GetIncomesAsync();
 
-        public Task<Income> GetIncomeByID(Guid id);
+        public Task<Income> GetIncomeByIDAsync(Guid id);
 
-        public Task CreateIncome(Income income);
+        public Task CreateIncomeAsync(Income income);
 
-        public Task DeleteIncome(Guid id);
+        public Task DeleteIncomeAsync(Guid id);
 
-        public Task UpdateIncome(Income income);
+        public Task UpdateIncomeAsync(Income income);
     }
 }

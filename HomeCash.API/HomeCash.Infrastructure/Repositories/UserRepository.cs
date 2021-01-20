@@ -17,13 +17,13 @@ namespace HomeCash.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateUser(User user)
+        public async Task CreateUserAsync(User user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteUser(Guid id)
+        public async Task DeleteUserAsync(Guid id)
         {
             var user = await _context.Users.FindAsync(id);
             _context.Users.Remove(user);
@@ -35,12 +35,17 @@ namespace HomeCash.Infrastructure.Repositories
             return await _context.Users.FindAsync(id);
         }
 
+        public async Task<User> GetUserByUserNameAsync(string userName)
+        {
+            return await _context.Users.SingleOrDefaultAsync(x => x.UserName == userName);
+        }
+
         public async Task<IEnumerable<User>> GetUsersByIdAsync(Guid id)
         {
             return await _context.Users.ToListAsync();
         }
 
-        public async Task UpdateUser(User user)
+        public async Task UpdateUserAsync(User user)
         {
             _context.Entry(user).State = EntityState.Modified;
             await _context.SaveChangesAsync();

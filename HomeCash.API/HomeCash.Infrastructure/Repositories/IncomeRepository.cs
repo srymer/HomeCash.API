@@ -4,7 +4,6 @@ using HomeCash.Infrastructure.EFCore.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HomeCash.Infrastructure.Repositories
@@ -18,31 +17,30 @@ namespace HomeCash.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateIncome(Income income)
+        public async Task CreateIncomeAsync(Income income)
         {
             _context.Incomes.Add(income);
             await _context.SaveChangesAsync();
-
         }
 
-        public async Task DeleteIncome(Guid id)
+        public async Task DeleteIncomeAsync(Guid id)
         {
             var income = await _context.Incomes.FindAsync(id);
             _context.Incomes.Remove(income);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Income> GetIncomeByID(Guid id)
+        public async Task<Income> GetIncomeByIDAsync(Guid id)
         {
             return await _context.Incomes.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Income>> GetIncomes()
+        public async Task<IEnumerable<Income>> GetIncomesAsync()
         {
             return await _context.Incomes.ToListAsync();
         }
 
-        public async Task UpdateIncome(Income income)
+        public async Task UpdateIncomeAsync(Income income)
         {
             _context.Entry(income).State = EntityState.Modified;
             await _context.SaveChangesAsync();

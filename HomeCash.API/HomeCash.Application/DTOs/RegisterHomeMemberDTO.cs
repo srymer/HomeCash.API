@@ -2,12 +2,11 @@
 
 namespace HomeCash.Application.DTOs
 {
-    public class UserDTO
+    public class RegisterHomeMemberDTO
     {
         public string UserName { get; set; }
-        public string Token { get; set; }
-        public string Role { get; set; }
-        public string HomeName { get; set; }
+        public string Password { get; set; }
         public Guid HomeBaseId { get; set; }
+        public string Role { get; set; }
     }
 }

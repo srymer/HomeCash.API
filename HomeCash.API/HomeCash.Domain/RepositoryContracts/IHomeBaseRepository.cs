@@ -6,12 +6,12 @@ namespace HomeCash.Domain.RepositoryContracts
 {
     public interface IHomeBaseRepository
     {
-        public Task<HomeBase> GetHomeBaseById(Guid homeId);
+        public Task<HomeBase> GetHomeBaseByIdAsync(Guid homeId);
 
-        public Task CreateHomeBase(HomeBase homeBase);
+        public Task CreateHomeBaseAsync(HomeBase homeBase);
 
-        public Task DeleteHomeBase(Guid homeId);
+        public Task DeleteHomeBaseAsync(Guid homeId);
 
-        public Task UpdateHomeBase(HomeBase homeBase);
+        public Task UpdateHomeBaseAsync(HomeBase homeBase);
     }
 }
